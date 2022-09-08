@@ -1,3 +1,257 @@
 :root {
-  --color-rojo: #f02d3e;
+  --color-red: #f02d3e;
+  --color-green: #a3fdd0;
+  --color-black: #0a0000;
+  --color-white: #fcfcfc;
+  --font-Roboto: "Roboto", sans-serif;
+  --font-FjallaOne: "Fjalla One", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-Roboto);
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--color-black);
+}
+
+.logo {
+  font-family: var(--font-FjallaOne);
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+/* Nav */
+nav a {
+  font-size: 1rem;
+  color: var(--color-white);
+  text-decoration: none;
+  margin: 0.5rem;
+}
+nav a:hover {
+  color: var(--color-red);
+}
+.burguer-nav {
+  color: var(--color-white);
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+button {
+  font-size: 1rem;
+  background-color: var(--color-red);
+  padding: 1rem 1rem;
+  color: var(--color-white);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Banner */
+
+main {
+  width: 100%;
+}
+.banner {
+  height: 80vh;
+  background-image: url(https://images.pexels.com/photos/1878346/pexels-photo-1878346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position: center;
+}
+.banner-text {
+  text-align: center;
+  padding-top: 20vh;
+  text-shadow: 1px 1px var(--color-black);
+}
+.banner-text h1 {
+  color: var(--color-white);
+  font-size: 8rem;
+}
+.banner-text p {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+/* About us */
+.about-us {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+}
+.about-us_text {
+  width: 50%;
+  padding: 1rem;
+}
+.about-us_text h2 {
+  line-height: 2;
+  font-size: 2rem;
+}
+.about-us_text h3 {
+  line-height: 2;
+  color: var(--color-red);
+}
+.about-us_img {
+  width: 50%;
+  height: 24rem;
+  background-image: url(https://theweekendedition.com.au/wp-content/uploads/2022/01/TWE-Antica-Pizzeria-11-1100x550-c-center.png);
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* Location */
+.location {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-red);
+}
+.location-title {
+  padding: 3rem;
+  color: var(--color-black);
+}
+.location-cards {
+  display: flex;
+}
+.location-card {
+  padding: 1rem;
+  width: 50%;
+}
+.location-card h2 {
+  font-size: 2rem;
+}
+.location_img1 {
+  width: 100%;
+  height: 24rem;
+  background-image: url(https://maclatino.com/wp-content/ups/2011/10/maps1.gif);
+  background-size: cover;
+  margin-top: 2rem;
+}
+.location_img2 {
+  width: 100%;
+  height: 24rem;
+  background-image: url(http://www.worldeasyguides.com/wp-content/uploads/2014/03/Map-of-Plaza-de-Espa%C3%B1a-Madrid.jpg);
+  background-size: cover;
+  margin-top: 2rem;
+}
+
+/* Galery */
+
+.galery {
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+}
+.galery-title {
+  color: var(--color-red);
+  padding: 2rem;
+}
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.images-container img {
+  width: 30%;
+}
+.images-container img:hover {
+  opacity: 0.7;
+}
+/* Footer */
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.contact {
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-around;
+}
+.contact-title {
+  text-align: center;
+  padding: 2rem;
+}
+.socialmedia i {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.copy {
+  text-align: center;
+  padding: 2rem;
+}
+/* Responsive */
+
+@media screen and (max-width: 700px) {
+  /* Nav */
+  nav {
+    display: none;
+  }
+  .burguer-nav {
+    display: block;
+  }
+  /* Banner */
+  .banner-text {
+    padding-top: 10vh;
+  }
+  .banner-text h1 {
+    font-size: 6rem;
+  }
+  .banner-text p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+  }
+  /* About us */
+  .about-us {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us_text {
+    width: 100%;
+  }
+  .about-us_img {
+    width: 95%;
+  }
+  /* Location */
+  .location {
+    width: 100%;
+  }
+  .location-cards {
+    flex-direction: column;
+  }
+  .location-card {
+    width: 100%;
+  }
+  /* Galery */
+  .images-container img {
+    width: 45%;
+  }
+  /* Contact */
+  .contact {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+  }
 }
